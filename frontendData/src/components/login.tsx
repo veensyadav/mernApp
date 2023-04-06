@@ -1,48 +1,14 @@
 import React, { useState, useEffect } from "react";
-// import { TextField, Button, Box, Typography } from "@mui/material";
 import { Box, Input, Button, FormLabel, Typography, TextField, InputLabel, OutlinedInput, InputAdornment, IconButton } from '@mui/material';
 import FormControl from '@mui/material/FormControl';
 import { useNavigate } from "react-router-dom";
-// import { useSessionStorageString } from "react-use-window-sessionstorage";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { login, authState, setAuthError } from "../redux/modules/auth";
 import { RootState } from "../redux/store";
 import { toastr } from "react-redux-toastr";
 import useForm from "../utils/useForm";
-// import Visibility from '../assests/images/visibility.svg';
-// import VisibilityOff from '../assests/images/visibility_off.svg';
-// import VisibilityIcon from '@mui/icons-material/Visibility';
-// import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
-
-
-// function Login() {
-//     const [email, setEmail] = useState("");
-//     const [password, setPassword] = useState("");
-
-//     const navigate = useNavigate();
-//     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-//         event.preventDefault();
-//         console.log(email, password);
-//         try {
-//             const result = await fetch('http://localhost:8080/api/v1/userAuth/login', {
-//                 method: 'post',
-//                 body: JSON.stringify({ email, password }),
-//                 headers: {
-//                     'Content-Type': 'application/json'
-//                 },
-//             });
-//             console.log("result",result);
-//             window.sessionStorage.setItem("data", "result.data.user.token");
-//             console.log(email, "email", password, "password");
-//             navigate("/main");
-
-//         } catch (error) {
-//             console.error(error);
-//         }
-//         // perform login logic here
-//     };
 
 export default function Login() {
     const navigate = useNavigate();
@@ -114,5 +80,3 @@ export default function Login() {
         </Box>
     )
 }
-
-// export default Login;
